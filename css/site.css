@@ -1,0 +1,79 @@
+.MainContentBorder {
+    background-color: lightsteelblue;
+    border: 2px solid;
+    width: 80vw;
+    height: 60vh;
+    position: relative;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+    align-items: end;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+.BarsInGraph {
+    grid-row: 1;
+    border: 5px;
+    font-family: 'Bitter', serif;
+    text-align: center;
+    width: 15vw;
+    transition: 0.5s;
+}
+
+.BarMcDonald {
+    grid-column: 1;
+    background-color: #fff10a;
+}
+.BarMcDonald:hover {
+    width: 15.3vw;
+    box-shadow: 0 -2px 10px 0 grey;
+}
+
+.BarWendy {
+    grid-column: 2;
+    background-color: #ED1B24;
+}
+.BarWendy:hover {
+    width: 15.3vw;
+    box-shadow: 0 -2px 10px 0 grey;
+}
+
+.BarChipotle {
+    grid-column: 3;
+    background-color: #451400;
+}
+.BarChipotle:hover {
+    width: 15.3vw;
+    box-shadow: 0 -2px 10px 0 grey;
+}
+
+.BarPepsi {
+    grid-column: 4;
+    background-color: #0085ca;
+}
+.BarPepsi:hover {
+    width: 15.3vw;
+    box-shadow: 0 -2px 10px 0 grey;
+}
+
+.BarCoke {
+    grid-column: 5;
+    background-color: #F40000;
+}
+.BarCoke:hover {
+    width: 15.3vw;
+    box-shadow: 0 -2px 10px 0 grey;
+}
+
+.BarNamePosition {
+    position: relative;
+    top: -50px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="uft-8">
+        <title>Fastfood Stocks</title>
+
+<!-- API Main Page -->
+        <!-- https://financialmodelingprep.com/developer/docs/#Company-Profile -->
+<!-- API Link -->
+        <!-- https://financialmodelingprep.com/api/v3/stock/real-time-price -->
+
+        <link href="./css/site.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+
+<!-- 100% = $1000 -->
+        <style>
+            .BarMcDonald {
+                height: 21.9%;
+            }
+
+            .BarWendy {
+                height: 1.96%;
+            }
+
+            .BarChipotle {
+                height: 81.7%;
+            }
+
+            .BarPepsi {
+                height: 12.9%;
+            }
+
+            .BarCoke {
+                height: 35.1%;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Stock Market Prices</h1>
+        <div class="MainContentBorder">
+            <div class="BarsInGraph BarMcDonald" 
+            onClick="console.log('Clicked on McDondald');
+            alert('A share of McDonalds Corp stock is worth: $219.71')">
+                <h2 class="BarNamePosition">McDonald's</h2>
+            </div>
+            <div class="BarsInGraph BarWendy" 
+            onClick="console.log('Clicked on Wendys');
+            alert('A share of Wendys stock is worth: $19.65')">
+                <h2 class="BarNamePosition">Wendy's</h2>
+            </div>
+            <div class="BarsInGraph BarChipotle" 
+            onClick="console.log('Clicked on Chipotle');
+            alert('A share of Chipotle stock is worth: $817')">
+                <h2 class="BarNamePosition">Chipotle</h2>
+            </div>
+            <div class="BarsInGraph BarPepsi" 
+            onClick="console.log('Clicked on Pepsi');
+            alert('A share of PepsiCo stock is worth: $129.94')">
+                <h2 class="BarNamePosition">Pepsi</h2>
+            </div>
+            <div class="BarsInGraph BarCoke" 
+            onClick="console.log('Clicked on Coke');
+            alert('A share of Coca-Cola stock is worth: $351.67')">
+                <h2 class="BarNamePosition">Coca-Cola</h2>
+            </div>
+        </div>
+    </body>
+</html>
