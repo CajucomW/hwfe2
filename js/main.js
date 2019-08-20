@@ -28,22 +28,22 @@ console.log('Running HW2');
 
 // let state = {
 let stockList = [
-        // {
-        //     symbol: "MCD",
-        //     price: "218.41",
-        // },
-        // {
-        //     symbol: "WEN",
-        //     price: "19.65",
-        // },
-        // {
-        //     symbol: "CMG",
-        //     price: "817",
-        // },
-        // {
-        //     symbol: "PEP",
-        //     price: "817",
-        // },
+        {
+            symbol: "MCD",
+            price: "218.41",
+        },
+        {
+            symbol: "WEN",
+            price: "19.65",
+        },
+        {
+            symbol: "CMG",
+            price: "817",
+        },
+        {
+            symbol: "PEP",
+            price: "817",
+        },
         {
             symbol: "COKE",
             price: "351.67"
@@ -66,13 +66,25 @@ function render() {
         let stockPrice = stockInfo.price;
         console.log('stockPrice defined');
 
+        // grab the names for each stock
+        let stockName = stockInfo.symbol;
+        console.log('stockName defined');
+
         // create a new div that contains this info
         let newDiv = document.createElement('div');
         console.log('newDiv defined');
 
+        // create a new h2 that contains the symbol
+        let newH2 = document.createElement('h2');
+        console.log('newH2 defined');
+
         // add a class to the newDiv called .BarsInGraph
         newDiv.classList.add('BarsInGraph');
         console.log('BarsInGraph added in newDiv');
+
+        //add a class to the newH2 called .BarNamePosition
+        newDiv.classList.add('.BarNamePosition');
+        console.log('BarNamePosition added in newH2');
 
         // add values from .BarsInGraph
         newDiv.style.height = stockPrice / 10 + '%';
@@ -80,6 +92,8 @@ function render() {
 
         console.log('newDiv created', newDiv);
         barsInGraph.appendChild(newDiv);
+        console.log('newH2 created', newH2);
+        barsInGraph.appendChild(newH2);
     }
 }
 
