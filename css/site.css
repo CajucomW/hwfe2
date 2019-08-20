@@ -6,9 +6,11 @@
     position: relative;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    /*grid-template-columns: repeat(5, 1fr);*/
+    display: flex;
+    justify-content: space-evenly;
     column-gap: 10px;
-    align-items: end;
+    align-items: flex-end;
     padding-left: 1vw;
     padding-right: 1vw;
 }
@@ -29,8 +31,7 @@ h1 {
     height: 1%;
 }
 
-.BarMcDonald {
-    grid-column: 1;
+.BarsInGraph:nth-child(5n+0) {
     background-color: #fff10a;
 }
 .BarMcDonald:hover {
@@ -38,8 +39,7 @@ h1 {
     box-shadow: 0 -2px 10px 0 grey;
 }
 
-.BarWendy {
-    grid-column: 2;
+.BarsInGraph:nth-child(5n+1) {
     background-color: #ED1B24;
 }
 .BarWendy:hover {
@@ -47,8 +47,7 @@ h1 {
     box-shadow: 0 -2px 10px 0 grey;
 }
 
-.BarChipotle {
-    grid-column: 3;
+.BarsInGraph:nth-child(5n+2) {
     background-color: #451400;
 }
 .BarChipotle:hover {
@@ -56,8 +55,7 @@ h1 {
     box-shadow: 0 -2px 10px 0 grey;
 }
 
-.BarPepsi {
-    grid-column: 4;
+.BarsInGraph:nth-child(5n+3) {
     background-color: #0085ca;
 }
 .BarPepsi:hover {
@@ -65,8 +63,7 @@ h1 {
     box-shadow: 0 -2px 10px 0 grey;
 }
 
-.BarCoke {
-    grid-column: 5;
+.BarsInGraph:nth-child(5n+4) {
     background-color: #F40000;
 }
 .BarCoke:hover {
