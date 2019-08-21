@@ -25,6 +25,7 @@ h1 {
     grid-row: 1;
     border: 5px;
     font-family: 'Bitter', serif;
+    font-size: 21px;
     text-align: center;
     width: 15vw;
     transition: 0.5s;
