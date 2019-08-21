@@ -65,6 +65,7 @@ function displayBarGraph() {
     console.log('running displayBarGraph');
 
     let barsInGraph = document.querySelector('#ToJavaScript');
+    barsInGraph.innerHTML = '';
     console.log('barsInGraph defined');
 
     for (let stockInfo of state.stockList) {
