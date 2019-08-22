@@ -102,9 +102,9 @@ function doFetch() {
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            state.stockList = data;
+            state.stockList = data.stockList;
+            displayBarGraph();
         });
 }
 
-displayBarGraph();
 doFetch();
