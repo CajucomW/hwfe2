@@ -1,14 +1,3 @@
-console.log('Running HW2');
-
-let state = {
-    stockList: [
-        {
-            symbol: "Wala",
-            price: "Wala",
-        },
-    ],
-};
-
 // function render() {
 //     console.log('rendering HW2');
 
@@ -59,6 +48,18 @@ let state = {
 //     }
 // }
 
+console.log('Running HW2');
+
+let state = {
+    stockList: [
+        {
+            "symbol": "Wala",
+            "price": "Wala"
+        },
+    ],
+};
+
+
 //_____________________________________________________API
 
 function displayBarGraph() {
@@ -82,17 +83,23 @@ function displayBarGraph() {
         let newDiv = document.createElement('div');
         console.log('newDiv defined');
 
+        //create a new h2 that contains the symbol
+        let newH3 = document.createElement('h3');
+        newH3.textContent = stockName + " - $" + stockPrice;
+        console.log('newH3 defined');
+        newH3.classList.add('BarNamePosition');
+
         // add a class to the newDiv called .BarsInGraph
         newDiv.classList.add('BarsInGraph');
         console.log('BarsInGraph added in newDiv');
-        newDiv.textContent = stockName + " - $" + stockPrice;
-
         // add values from .BarsInGraph
         newDiv.style.height = stockPrice / 10 + '%';
         console.log('height established');
 
-        console.log('newDiv created', newDiv);
+        console.log('newDiv created', newDiv, 'new h2 created', newH3);
+        newDiv.appendChild(newH3);
         barsInGraph.appendChild(newDiv);
+        
     }
 
 }
@@ -102,7 +109,12 @@ function doFetch() {
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            state.stockList = data.stockList;
+            state.stockList = data.stockList.filter(stockdata => 
+            stockdata.symbol === "CMG" || 
+            stockdata.symbol === "MCD" || 
+            stockdata.symbol === "PEP" || 
+            stockdata.symbol === "WEN" || 
+            stockdata.symbol === "COKE");
             displayBarGraph();
         });
 }
