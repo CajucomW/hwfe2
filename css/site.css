@@ -6,7 +6,6 @@
     position: relative;
     margin: auto;
     display: grid;
-    /*grid-template-columns: repeat(5, 1fr);*/
     display: flex;
     justify-content: space-evenly;
     column-gap: 10px;
@@ -57,4 +56,9 @@ h1 {
 .BarNamePosition {
     position: relative;
     top: -50px;
+}
+
+.CheckBoxPosition {
+    width: 82vw;
+    margin: auto;
 }
