@@ -59,6 +59,9 @@ h1 {
 }
 
 .CheckBoxPosition {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
     width: 82vw;
     margin: auto;
+    font-family: 'Bitter', serif;
 }
