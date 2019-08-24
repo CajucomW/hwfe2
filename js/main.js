@@ -59,7 +59,7 @@ function displayNameButtons() {
 
 
 
-function doFetch() {
+function render() {
     fetch('https://financialmodelingprep.com/api/v3/stock/real-time-price')
         .then(response => response.json())
         .then(data => {
@@ -92,5 +92,5 @@ function doFetchAgain() {
         });
 }
 
-doFetch();
+render();
 doFetchAgain();
